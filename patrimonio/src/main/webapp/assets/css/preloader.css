@@ -1,0 +1,44 @@
+
+  body{
+	  padding:0;
+	  margin:0;
+  }
+
+  #preloader{
+	  position:fixed;
+	  top: 50%;
+      left: 50%;
+      margin-top: -9em;
+	  margin-left: -15em;
+	  width:500px;
+	  height:300px;
+  }
+  
+  
+  .lodingmessage {
+	  margin-right:auto;
+	  margin-left:auto;
+	  font-family:Verdana, Geneva, sans-serif;
+	  font-size:12px;
+      font-weight: bolder;	  
+  }
+  
+  
+   .default {
+        margin:2px;
+        border: 1px solid #949dad;
+        width: 400px;
+        height:10px;
+        overflow: hidden;
+        padding:2px
+    }
+    .change {
+        background: #d4e4ff;
+        height: 100%;      
+    }
+     
+    
+  .container{
+	  margin:10px;
+	  padding:10px;
+  }

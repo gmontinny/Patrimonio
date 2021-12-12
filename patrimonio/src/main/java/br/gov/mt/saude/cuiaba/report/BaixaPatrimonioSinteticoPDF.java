@@ -1,0 +1,53 @@
+package br.gov.mt.saude.cuiaba.report;
+
+import java.util.Collection;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+import br.com.caelum.vraptor.jasperreports.Report;
+import br.gov.mt.saude.cuiaba.report.model.BaixaPatrimonio;
+
+
+public class BaixaPatrimonioSinteticoPDF  implements Report{
+	
+	private final List<BaixaPatrimonio> data;
+	private Map<String, Object> parameters;
+	
+	public BaixaPatrimonioSinteticoPDF(List<BaixaPatrimonio> data) {
+		this.data = data;
+		this.parameters = new HashMap<String, Object>();
+	}
+
+	@Override
+	public String getTemplate() {	
+		return "baixa_sintetico.jasper";
+	}
+
+	@Override
+	public Map<String, Object> getParameters() {
+		return this.parameters;
+	}
+
+	@Override
+	public Collection getData() {
+		return data;
+	}
+
+	@Override
+	public String getFileName() {
+		return "report" + System.currentTimeMillis();
+	}
+
+	@Override
+	public Report addParameter(String parameter, Object value) {
+		this.parameters.put(parameter, value);
+		return this;
+	}
+
+	@Override
+	public boolean isCacheable() {
+		return true;
+	}
+
+}

@@ -1,0 +1,8 @@
+eclipse.preferences.version=1
+encoding//src/main/webapp/WEB-INF/reports/baixa_analitico.jrxml=UTF-8
+encoding//src/main/webapp/WEB-INF/reports/baixa_sintetico.jrxml=UTF-8
+encoding//src/main/webapp/WEB-INF/reports/patrimonio_analitico.jrxml=UTF-8
+encoding//src/main/webapp/WEB-INF/reports/patrimonio_simplificado.jrxml=UTF-8
+encoding//src/main/webapp/WEB-INF/reports/patrimonio_sintetico.jrxml=UTF-8
+encoding//src/main/webapp/WEB-INF/reports/transferencia_analitico.jrxml=UTF-8
+encoding//src/main/webapp/WEB-INF/reports/transferencia_sintetico.jrxml=UTF-8

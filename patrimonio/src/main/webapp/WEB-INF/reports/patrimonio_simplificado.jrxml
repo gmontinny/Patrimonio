@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.6.0.final using JasperReports Library version 6.6.0  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="patrimonio_simplificado" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="8bc7521b-157b-4af9-8fdb-7d791f405a54">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="patrimonio"/>
+	<parameter name="logo" class="java.awt.Image"/>
+	<parameter name="pSecretaria" class="java.lang.String"/>
+	<parameter name="pSetor" class="java.lang.String"/>
+	<parameter name="pLocal" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="baixa" class="java.lang.Integer">
+		<fieldDescription><![CDATA[baixa]]></fieldDescription>
+	</field>
+	<field name="setor" class="java.lang.String">
+		<fieldDescription><![CDATA[setor]]></fieldDescription>
+	</field>
+	<field name="observacao" class="java.lang.String">
+		<fieldDescription><![CDATA[observacao]]></fieldDescription>
+	</field>
+	<field name="situacao" class="java.lang.String">
+		<fieldDescription><![CDATA[situacao]]></fieldDescription>
+	</field>
+	<field name="grupo" class="java.lang.String">
+		<fieldDescription><![CDATA[grupo]]></fieldDescription>
+	</field>
+	<field name="imagem" class="java.lang.String">
+		<fieldDescription><![CDATA[imagem]]></fieldDescription>
+	</field>
+	<field name="modelo" class="java.lang.String">
+		<fieldDescription><![CDATA[modelo]]></fieldDescription>
+	</field>
+	<field name="numeropatrimonio" class="java.lang.String">
+		<fieldDescription><![CDATA[numeropatrimonio]]></fieldDescription>
+	</field>
+	<field name="local" class="java.lang.String">
+		<fieldDescription><![CDATA[local]]></fieldDescription>
+	</field>
+	<field name="marca" class="java.lang.String">
+		<fieldDescription><![CDATA[marca]]></fieldDescription>
+	</field>
+	<field name="material" class="java.lang.String">
+		<fieldDescription><![CDATA[material]]></fieldDescription>
+	</field>
+	<field name="serial" class="java.lang.String">
+		<fieldDescription><![CDATA[serial]]></fieldDescription>
+	</field>
+	<field name="subgrupo" class="java.lang.String">
+		<fieldDescription><![CDATA[subgrupo]]></fieldDescription>
+	</field>
+	<field name="fornecedor" class="java.lang.String">
+		<fieldDescription><![CDATA[fornecedor]]></fieldDescription>
+	</field>
+	<field name="secretaria" class="java.lang.String">
+		<fieldDescription><![CDATA[secretaria]]></fieldDescription>
+	</field>
+	<variable name="TOTAL" class="java.lang.Long" calculation="Count">
+		<variableExpression><![CDATA[$F{numeropatrimonio}]]></variableExpression>
+	</variable>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<pageHeader>
+		<band height="128" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="3" width="801" height="123" uuid="94d93086-da8c-49c6-8ff9-689dad18ebef"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="207" y="8" width="373" height="25" uuid="6fbe4cf8-7bb5-4a4f-a1ba-1a2d6b0c1319">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font size="18" isBold="true" pdfFontName="Helvetica-Bold"/>
+				</textElement>
+				<text><![CDATA[SECRETARIA MUNICIPAL DE SAÚDE]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="207" y="33" width="350" height="20" uuid="2ee5b4ac-3b21-4424-8da2-e7fe6430bab5">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true" pdfFontName="Helvetica-Bold"/>
+				</textElement>
+				<text><![CDATA[Diretoria de Vigilância em Saúde]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="207" y="53" width="349" height="15" uuid="13525c06-1d9d-41c0-be2f-137449f63a18">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font isItalic="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Sistema de Controle Patrimonial"]]></textFieldExpression>
+			</textField>
+			<image>
+				<reportElement x="10" y="9" width="180" height="58" uuid="bbed2a36-29fa-4d13-b765-e0d05f2dc47f"/>
+				<imageExpression><![CDATA[$P{logo} == null ? "src/main/webapp/assets/images/relatorio_logo.jpg" : $P{logo}]]></imageExpression>
+			</image>
+			<textField>
+				<reportElement x="17" y="80" width="244" height="15" uuid="a36b4317-7b53-4ade-b20c-f8f3b7f6287f"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{pSecretaria}.isEmpty() ? "" : $P{pSecretaria}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="261" y="80" width="24" height="15" uuid="62efe4a1-d784-4a5a-9050-9838ba9ba20c"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[/]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="285" y="80" width="241" height="15" uuid="92ba19ba-bacd-4ebd-9c2a-ada8b37ab449"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{pSetor}.isEmpty() ? "" : $P{pSetor}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="526" y="80" width="24" height="15" uuid="3eaab998-5ed5-4deb-80c4-4144a4ef628d"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[/]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="550" y="80" width="240" height="15" uuid="d935a9f2-a3b9-425b-9632-0b0491913a18"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{pLocal}.isEmpty() ? "" : $P{pLocal}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="9" y="108" width="91" height="15" uuid="83030d0e-b094-4cf3-8d72-42a6a8c03f79"/>
+				<textElement verticalAlignment="Middle">
+					<font pdfFontName="Helvetica-Bold"/>
+					<paragraph leftIndent="5"/>
+				</textElement>
+				<text><![CDATA[Patrimonio]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="102" y="108" width="100" height="15" uuid="83e6a4f3-e42d-4de4-af4a-e66b20b6d6f3"/>
+				<textElement verticalAlignment="Middle">
+					<font pdfFontName="Helvetica-Bold"/>
+					<paragraph leftIndent="5"/>
+				</textElement>
+				<text><![CDATA[Grupo]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="258" y="108" width="100" height="15" uuid="5b2646d7-060c-4cc9-ad38-f9f0957ddfdd"/>
+				<textElement verticalAlignment="Middle">
+					<font pdfFontName="Helvetica-Bold"/>
+					<paragraph leftIndent="5"/>
+				</textElement>
+				<text><![CDATA[SubGrupo]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="414" y="108" width="100" height="15" uuid="22608aa9-bce9-4418-ad9d-339ef5fa1d24"/>
+				<textElement verticalAlignment="Middle">
+					<font pdfFontName="Helvetica-Bold"/>
+					<paragraph leftIndent="5"/>
+				</textElement>
+				<text><![CDATA[Material]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="560" y="108" width="100" height="15" uuid="ee1df0f1-5d10-4972-bdcc-a6efb256932a"/>
+				<textElement verticalAlignment="Middle">
+					<font pdfFontName="Helvetica-Bold"/>
+					<paragraph leftIndent="5"/>
+				</textElement>
+				<text><![CDATA[Marca]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="693" y="108" width="105" height="15" uuid="75ee4a81-0aee-46e2-b800-e572d75e1c3f"/>
+				<textElement verticalAlignment="Middle">
+					<font pdfFontName="Helvetica-Bold"/>
+					<paragraph leftIndent="5"/>
+				</textElement>
+				<text><![CDATA[Modelo]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="580" y="9" width="90" height="15" uuid="aeae6152-2864-4cff-955a-2476da89014a"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA["Pagina: " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement x="670" y="9" width="122" height="15" uuid="c2dac5fb-5e99-4bd8-bf74-83421b30d7d2"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[" de " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<detail>
+		<band height="22" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="0" width="801" height="20" forecolor="#E0E0E0" backcolor="#E0E0E0" uuid="3f12e2a9-357b-4d38-89ef-624fbd9f7095">
+					<printWhenExpression><![CDATA[new Boolean(($V{COLUMN_COUNT}.intValue() % 2) == 0)]]></printWhenExpression>
+				</reportElement>
+			</rectangle>
+			<textField>
+				<reportElement x="9" y="2" width="91" height="15" uuid="5c16b9c6-299f-4bbd-80cd-1b2066ea82dc"/>
+				<textElement verticalAlignment="Middle">
+					<paragraph leftIndent="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{numeropatrimonio}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="102" y="2" width="155" height="15" uuid="024ddc5a-c867-421e-9739-5b9de1c472a9"/>
+				<textElement verticalAlignment="Middle">
+					<paragraph leftIndent="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{grupo}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="258" y="2" width="154" height="15" uuid="a43bf210-fc4d-4b35-9a45-3a7021c752ba"/>
+				<textElement verticalAlignment="Middle">
+					<paragraph leftIndent="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{subgrupo}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="415" y="2" width="141" height="15" uuid="ba539da9-3666-4a7a-a847-725693a9f71b"/>
+				<textElement verticalAlignment="Middle">
+					<paragraph leftIndent="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{material}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="560" y="2" width="131" height="15" uuid="f0d7ac7c-7137-453c-8800-7a7ac1a1c550"/>
+				<textElement verticalAlignment="Middle">
+					<paragraph leftIndent="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{marca}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="693" y="2" width="108" height="15" uuid="6bd8606a-164a-4ff5-a2f7-603fa6645a5a"/>
+				<textElement verticalAlignment="Middle">
+					<paragraph leftIndent="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{modelo}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="56" splitType="Stretch">
+			<staticText>
+				<reportElement x="3" y="4" width="280" height="12" uuid="26358e42-304e-47a2-b5f7-3ea86e836740">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<textElement>
+					<font size="9" isBold="true" pdfFontName="Helvetica-Bold"/>
+				</textElement>
+				<text><![CDATA[Av. Mario Palma, S/Nº Bairro: Ribeirão do Lipa]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="3" y="16" width="280" height="12" uuid="68947082-612b-4f4e-988e-d7cc7b2709e3">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<textElement>
+					<font size="9" isBold="true" pdfFontName="Helvetica-Bold"/>
+				</textElement>
+				<text><![CDATA[Cuiabá - MT CEP:78.040-640]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="3" y="28" width="280" height="12" uuid="5e88f42f-f3ad-486c-b753-e9d9719370e0">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<textElement>
+					<font size="9" isBold="true" pdfFontName="Helvetica-Bold"/>
+				</textElement>
+				<text><![CDATA[Fone: (065)3617-1689 Fax: (065)3617-1487]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="3" y="40" width="280" height="12" uuid="dfecb89c-3d68-47a9-937f-edbfb25b5207">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<textElement>
+					<font size="9" isBold="true" isUnderline="true" pdfFontName="Helvetica-Bold"/>
+				</textElement>
+				<text><![CDATA[smscovisa@cuiaba.mt.gov.br]]></text>
+			</staticText>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="17" splitType="Stretch">
+			<textField>
+				<reportElement x="480" y="0" width="321" height="15" uuid="c1c05f89-75c6-421e-b926-d69d83bdba4c"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font pdfFontName="Helvetica-Bold"/>
+				</textElement>
+				<textFieldExpression><![CDATA["TOTAL : "  + $V{TOTAL}.toString()]]></textFieldExpression>
+			</textField>
+		</band>
+	</summary>
+</jasperReport>
